@@ -1,0 +1,177 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Light background color */
+}
+
+/* Container for the form */
+.review-container {
+    max-width: 600px; /* Set maximum width for the form */
+    margin: 50px auto; /* Centering the form */
+    padding: 20px; /* Padding inside the form */
+    background-color: white; /* White background for form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    text-align: left;
+}
+
+/* Form Title */
+.review-container h2 {
+    text-align: center;
+    color:  #0077b6; /* Blue color for the heading */
+    margin-bottom: 20px;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333; /* Dark text color */
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+select,
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside input */
+    margin-bottom: 20px; /* Space between input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+textarea {
+    resize: vertical; /* Allow resizing only vertically */
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0077b6; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Star Rating Styles */
+.rating-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.star-rating {
+    display: inline-block; /* Keep stars in line */
+}
+
+.star {
+    font-size: 40px;
+    color: #ccc; /* Default grey color for stars */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 0 5px; /* Space between stars */
+    transition: color 0.3s ease; /* Smooth transition on color change */
+}
+
+/* Selected stars (Gold) */
+.star.selected {
+    color: gold; /* Gold color for selected stars */
+}
+
+/* Rating text (optional styling) */
+#ratingValue {
+    font-size: 16px;
+    color: #333; /* Dark text color */
+    margin-top: 10px; /* Space between stars and rating text */
+}
+
+/* Header Styling */
+header {
+    background-color:  #0077b6; /* Blue background for header */
+    color: white; /* White text color */
+    padding: 15px 0; /* Padding for the header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo {
+    float: left;
+}
+
+.carpool-logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+.topnav {
+    float: right;
+    list-style: none;
+}
+
+.topnav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.topnav a:hover {
+    text-decoration: underline;
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    label, input, select, textarea {
+        font-size: 14px;
+    }
+
+    .star {
+        font-size: 35px;
+        margin: 0 3px; /* Less space between stars */
+    }
+    
+    .topnav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .topnav li {
+        display: block;
+        margin: 5px 0;
+    }
+}

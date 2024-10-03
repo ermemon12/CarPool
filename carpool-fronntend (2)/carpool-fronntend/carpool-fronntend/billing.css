@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Font for the entire page */
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px; /* Padding around the body */
+}
+h1{
+    text-align: center;
+    color: #007bff;
+}
+.billing-container {
+    max-width: 400px; /* Increased max width for better usability */
+    margin: 0 auto; /* Center the form */
+    padding: 30px; /* Inner padding for the container */
+    background-color: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Flexbox layout for the form */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside the input */
+    margin: 10px 0; /* Vertical margin for spacing */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 5px; /* Rounded corners for inputs */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 16px; /* Font size for better readability */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Focus Styles for Inputs */
+input:focus,
+select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+    width: 100%; /* Full width for buttons */
+    padding: 10px; /* Padding inside the button */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for Button */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .billing-container {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select {
+        font-size: 14px; /* Smaller font size for inputs on mobile */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size for button on mobile */
+    }
+}

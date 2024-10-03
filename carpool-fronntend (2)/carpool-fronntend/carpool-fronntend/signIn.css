@@ -1,0 +1,75 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color */
+    line-height: 1.6;
+}
+
+/* Container Styles */
+.container {
+    max-width: 400px; /* Set a max width for the form */
+    margin: 100px auto; /* Center the container */
+    padding: 20px;
+    background-color: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.sign-in-form h2 {
+    text-align: center; /* Center heading */
+    margin-bottom: 20px;
+    color: #0077b6; /* Heading color */
+}
+
+.input-group {
+    margin-bottom: 15px; /* Space between fields */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0077b6; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+button[type="submit"] {
+    width: 100%; /* Full width button */
+    padding: 10px;
+    background-color: #0077b6; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+button[type="submit"]:hover {
+    background-color: #005f8a; /* Darker shade on hover */
+}
+
+p {
+    text-align: center; /* Center text */
+    margin-top: 10px;
+}

@@ -1,0 +1,54 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Car-Pooling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signUp.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="centered-heading">Car-Pooling</h1>
+        <form id="heritageForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <small class="error-message" id="nameError"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message" id="emailError"></small>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <small class="error-message" id="phoneError"></small>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+            <div class="already-account">
+                <p>Already have an account?<a href="signIn.html">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="signUp.js">
+          
+        function handleSignUp(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Here you can add code to handle the registration logic
+            // For example, sending data to the server via AJAX
+
+            // After successful registration, redirect to the sign-in page
+            window.location.href = 'signIn.html'; // Change this to your actual sign-in page
+        }
+    </script>
+</body>
+</html>

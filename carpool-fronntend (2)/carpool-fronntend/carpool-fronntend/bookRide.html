@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Ride - Carpooling</title>
+    <link rel="stylesheet" href="bookRide.css">
+</head>
+<body>
+    <header>
+        <h1>Find a Ride</h1>
+    </header>
+    
+    <section class="search-form">
+        <h2>Search for Available Rides</h2>
+        <form id="rideSearchForm">
+            <label for="location">Starting Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time">
+
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section class="ride-results" id="rideResults">
+        <h2>Available Rides</h2>
+        <div id="ridesList">
+            <!-- JS will inject ride options here -->
+        </div>
+    </section>
+
+    <div id="bookingMessage" style="display: none;">
+        <p>Do you want to book this ride?</p>
+        <button id="confirmBooking">Yes, Book it!</button>
+        <button id="cancelBooking">No, I changed my mind</button>
+    </div>
+
+    <script src="bookRide.js"></script>
+</body>
+</html>

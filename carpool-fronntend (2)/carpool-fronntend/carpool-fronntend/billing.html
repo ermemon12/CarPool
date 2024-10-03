@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpool Billing Gateway</title>
+    <link rel="stylesheet" href="billing.css">
+</head>
+<body>
+    <div class="billing-container">
+        <h1>Carpool Payment</h1>
+        <div class="ride-details"></div>
+            
+            
+        <form id="billingForm">
+           
+
+            <div class="user-details">
+                <h2>User Information</h2>
+                <input type="text" id="userName" placeholder="Full Name" required>
+                <input type="email" id="userEmail" placeholder="Email" required>
+                <input type="text" id="userPhone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="payment-methods">
+                <h2>Select Payment Method</h2>
+                <select id="paymentMethod" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="netbanking">Net Banking</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="direct">Direct Payment to Rider</option>
+                </select>
+            </div>
+
+            <!-- Payment Fields -->
+            <div id="paymentFields" class="paymentFields">
+                <div id="cardFields" class="field-group" style="display:none;">
+                    <input type="text" id="cardName" placeholder="Cardholder Name" required>
+                    <input type="text" id="cardNumber" placeholder="Card Number" required>
+                    <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+                    <input type="text" id="cvv" placeholder="CVV" required>
+                </div>
+
+                <div id="upiFields" class="field-group" style="display:none;">
+                    <input type="text" id="upiId" placeholder="UPI ID" required>
+                </div>
+
+                <div id="netbankingFields" class="field-group" style="display:none;">
+                    <input type="text" id="bankName" placeholder="Bank Name" required>
+                    <input type="text" id="accountNumber" placeholder="Account Number" required>
+                    <input type="text" id="netbankingCardName" placeholder="Cardholder Name" required>
+                    <input type="text" id="netbankingCardNumber" placeholder="Card Number" required>
+                    <input type="text" id="netbankingExpiryDate" placeholder="Expiry Date (MM/YY)" required>
+                    <input type="text" id="netbankingCvv" placeholder="CVV" required>
+                </div>
+
+                <div id="paypalFields" class="field-group" style="display:none;">
+                    <input type="text" id="paypalEmail" placeholder="PayPal Email" required>
+                </div>
+            </div>
+
+            <button type="submit">Confirm Payment</button>
+        </form>
+        <div id="responseMessage"></div>
+    </div>
+    <script src="billing.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1 class="carpool-logo">Carpool</h1>
+        </div>
+    </div>
+</header>
+
+<div class="profile-container">
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="rides.html">My Rides</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>User Profile</h2>
+        <p><strong>Name:</strong> <span id="username">John Doe</span></p>
+        <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
+        <p><strong>Total Rides Created:</strong> <span id="ridesCreated">0</span></p>
+        <p><strong>Total Rides Selected:</strong> <span id="ridesSelected">0</span></p>
+
+        <div class="ride-lists">
+            <h3>Your Created Rides</h3>
+            <ul id="createdRidesList">
+                <!-- Created rides will be inserted here -->
+            </ul>
+
+            <h3>Your Selected Rides</h3>
+            <ul id="selectedRidesList">
+                <!-- Selected rides will be inserted here -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>

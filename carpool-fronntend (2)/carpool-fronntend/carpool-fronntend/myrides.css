@@ -1,0 +1,109 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Font family */
+    background-color: #f0f4ff; /* Very light blue background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: #333; /* Dark text color */
+}
+
+/* Header Styling */
+header {
+    background-color: #2196F3; /* Blue header background */
+    padding: 15px 0; /* Padding for the header */
+}
+
+/* Container */
+.container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Centering the container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px; /* Logo font size */
+    color: white; /* Logo text color */
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    flex-grow: 1; /* Make navbar grow to fill space */
+}
+
+.navbar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align links to the right */
+}
+
+.navbar li {
+    margin-left: 20px; /* Space between nav items */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(6, 0, 0); /* Link text color */
+    padding: 10px; /* Padding for links */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar a:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+/* My Rides Container */
+.my-rides-container {
+    max-width: 600px; /* Max width for my rides container */
+    margin: 40px auto; /* Centering the container */
+    background-color: white; /* White background for rides section */
+    padding: 20px; /* Padding for the rides section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Rides Title */
+.my-rides-container h2 {
+    font-size: 24px; /* Title font size */
+    color: #2196F3; /* Blue for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Ride Lists */
+h3 {
+    font-size: 20px; /* Heading size for sections */
+    margin-top: 15px; /* Space above section headings */
+    color: #333; /* Dark text for section headings */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* No padding */
+}
+
+ul li {
+    background-color: #e3f2fd; /* Light blue background for list items */
+    margin-bottom: 10px; /* Space below each item */
+    padding: 10px; /* Padding inside each list item */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+ul li:hover {
+    background-color: #bbdefb; /* Lighter blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .my-rides-container {
+        padding: 15px; /* Reduced padding for mobile */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button font size for mobile */
+    }
+}

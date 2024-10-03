@@ -1,0 +1,86 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #0077b6; /* Header background color */
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.topnav {
+    list-style: none;
+    display: flex;
+}
+
+.topnav li {
+    margin-left: 20px;
+}
+
+.topnav a {
+    color: white; /* Link color */
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #005f8a; /* Darker shade on hover */
+}
+
+/* Services Container Styles */
+.services-container {
+    max-width: 800px; /* Set max width for the services section */
+    margin: 40px auto; /* Center the container */
+    padding: 20px;
+    background-color: white; /* White background for the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.services-container h2 {
+    text-align: center; /* Center heading */
+    margin-bottom: 20px;
+    color: #0077b6; /* Heading color */
+}
+
+.service {
+    margin-bottom: 20px; /* Space between services */
+}
+
+.service h3 {
+    color: #0077b6; /* Service title color */
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #555; /* Service description color */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0077b6; /* Footer background color */
+    color: white;
+}

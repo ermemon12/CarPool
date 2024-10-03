@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Review</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="col6">
+            <div class="logo">
+                <h1 class="carpool-logo">Carpool</h1>
+            </div>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signIn.html">Sign In</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="help.html">Help</a></li>
+                <!-- <li><a href="writeReview.html" class="write-review-btn">Write a Review</a></li> -->
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</header>
+
+<div class="review-container">
+    <h2>Write a Review</h2>
+    <form id="review-form">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+            <option value="rider">Rider</option>
+            <option value="passenger">Passenger</option>
+        </select>
+        <div class="rating-container">
+            <!-- <h2>Rate this Ride:</h2> -->
+            <div class="rating-container">
+                <div class="star-rating" id="starRating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <p id="ratingValue">Rating: 0</p>
+            </div>
+        <!-- <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★</option>
+            <option value="3">★★★</option>
+            <option value="2">★★</option>
+            <option value="1">★</option>
+        </select> -->
+
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" rows="5" required></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+</div>
+
+<script>
+    // Star rating functionality
+    let selectedRating = 0; // Initially no rating is selected
+    const stars = document.querySelectorAll('.star');
+    const ratingValueElement = document.getElementById('ratingValue');
+
+    // Function to update star appearance based on the rating
+    function updateStars(rating) {
+        stars.forEach(star => {
+            if (star.getAttribute('data-value') <= rating) {
+                star.classList.add('selected');
+            } else {
+                star.classList.remove('selected');
+            }
+        });
+        ratingValueElement.textContent = `Rating: ${rating}`;
+    }
+
+    // Loop through all stars and add event listeners for click, mouseover, and mouseout
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            selectedRating = star.getAttribute('data-value');
+            updateStars(selectedRating); // Update the stars based on the selected rating
+        });
+
+        star.addEventListener('mouseover', () => {
+            const hoverValue = star.getAttribute('data-value');
+            updateStars(hoverValue); // Temporarily show the stars for hover
+        });
+
+        star.addEventListener('mouseout', () => {
+            updateStars(selectedRating); // Reset the stars to the selected rating when the mouse leaves
+        });
+    });
+
+    // Form submission handling
+    document.getElementById('review-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission to server by default
+
+        const username = document.getElementById('username').value;
+        const role = document.getElementById('role').value;
+        const review = document.getElementById('review').value;
+
+        // Ensure a rating has been selected before submission
+        if (selectedRating === 0) {
+            alert('Please select a rating.');
+            return;
+        }
+
+        // Collect form data
+        const reviewData = {
+            username,
+            role,
+            rating: selectedRating,
+            review
+        };
+
+        // You can process the data here or send it to a server using fetch or AJAX
+        console.log('Submitted Review:', reviewData);
+
+        alert('Review submitted successfully!');
+        document.getElementById('review-form').reset(); // Reset the form
+        updateStars(0); // Reset the star rating display
+    });
+</script>
+
+
+</body>
+</html>

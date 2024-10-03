@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Font for the entire page */
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Light background color for the page */
+    color: #333; /* Default text color */
+}
+
+header {
+    background-color: #0077b6; /* Header background color */
+    color: white; /* Text color in the header */
+    padding: 20px;
+    text-align: center; /* Centered text in header */
+}
+
+.offer-form, .ride-offers {
+    max-width: 800px; /* Max width for the form and offers sections */
+    margin: 40px auto; /* Centering the sections */
+    padding: 20px; /* Padding for sections */
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.offer-form h2, .ride-offers h2 {
+    font-size: 28px; /* Title font size */
+    color: #0077b6; /* Title color */
+    margin-bottom: 20px; /* Margin below the title */
+    text-align: center; /* Centered text for titles */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Flex layout for form elements */
+    flex-direction: column; /* Column layout for form fields */
+}
+
+label {
+    font-size: 16px; /* Label font size */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="time"],
+input[type="date"] {
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    font-size: 16px; /* Input font size */
+}
+
+button {
+    background-color: #0077b6; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px; /* Padding for buttons */
+    border: none; /* No border for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #005f87; /* Darker blue on hover */
+}
+
+/* Rides List */
+#ridesList {
+    margin-top: 20px; /* Space above rides list */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offer-form, .ride-offers {
+        padding: 15px; /* Reduced padding for mobile */
+    }
+
+    header {
+        padding: 15px; /* Reduced padding for mobile header */
+    }
+
+    .offer-form h2, .ride-offers h2 {
+        font-size: 24px; /* Smaller title font size for mobile */
+    }
+}

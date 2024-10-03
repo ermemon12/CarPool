@@ -1,0 +1,109 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e6f7ff, #cfefff); /* Light blue gradient background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #5edfff; /* Light blue header background */
+    padding: 15px 0; /* Padding for the header */
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex; /* Flex layout for sidebar and content */
+    max-width: 1200px;
+    margin: 20px auto; /* Centering the profile container */
+    background-color: white; /* White background for profile section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Fixed width for sidebar */
+    background-color: #f0f8ff; /* Light blue sidebar */
+    border-right: 2px solid #5edfff; /* Right border for sidebar */
+    padding: 20px; /* Padding inside the sidebar */
+}
+
+.sidebar h3 {
+    color: #4a90e2; /* Darker blue for sidebar heading */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* No padding */
+}
+
+.sidebar li {
+    margin: 15px 0; /* Space between items */
+}
+
+.sidebar a {
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Blue text color */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.sidebar a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Content Styles */
+.content {
+    flex: 1; /* Take remaining space */
+    padding: 20px; /* Padding inside the content area */
+}
+
+.content h2 {
+    text-align: left; /* Align heading to the left */
+    color: #4a90e2; /* Darker blue for content heading */
+    margin-bottom: 20px;
+}
+
+.ride-lists h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #4a90e2; /* Darker blue for ride section headings */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* No padding */
+}
+
+ul li {
+    background-color: #f1f1f1; /* Light grey background for list items */
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+ul li:hover {
+    background-color: #e0f4ff; /* Lighter blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar on small screens */
+        border-right: none; /* Remove right border */
+        border-bottom: 2px solid #5edfff; /* Add bottom border */
+    }
+}

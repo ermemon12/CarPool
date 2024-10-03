@@ -1,0 +1,119 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e6f7ff, #cfefff); /* Light blue gradient background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #5edfff; /* Light blue header background */
+    padding: 15px 0; /* Padding for the header */
+}
+
+/* Container */
+.container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Centering the container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px; /* Logo font size */
+    color: white; /* Logo text color */
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    flex-grow: 1; /* Make navbar grow to fill space */
+}
+
+.navbar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align links to the right */
+}
+
+.navbar li {
+    margin-left: 20px; /* Space between nav items */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link text color */
+    padding: 10px; /* Padding for links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar a:hover {
+    background-color: #007bff; /* Darker blue on hover */
+}
+
+/* Settings Container */
+.settings-container {
+    max-width: 800px; /* Max width for settings container */
+    margin: 40px auto; /* Centering the container */
+    background-color: white; /* White background for settings section */
+    padding: 30px; /* Padding for the settings section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Left-align text */
+}
+
+/* Settings Title */
+.settings-container h2 {
+    font-size: 28px; /* Title font size */
+    color: #4a90e2; /* Darker blue for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Form Styles */
+label {
+    font-weight: bold; /* Bold labels */
+    margin-top: 15px; /* Space above labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    margin: 10px 0; /* Space around inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+button {
+    
+    background-color: #5ba5f5; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px; /* Padding for buttons */
+    border: none; /* No border for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on buttons */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-container {
+        padding: 20px; /* Reduced padding for mobile */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button font size for mobile */
+    }
+}
